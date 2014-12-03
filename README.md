@@ -1,23 +1,40 @@
-Vinci-Graph-Visualization (0.1)
-=========================
+VinciGraph.js (0.1)
+===
 
-===Introduction===
+Introduction
+---
 This is a reference visualization which receives graph data (vertices and edges) in JSON form either from a server or flat file (on the client computer) and visualizes it in the browser. It is intended to be used as a component of other web applications rather then as a standalone application.
 
-The Morse Graph Visualization provides both 2D (D3.js with SVG rendering) and 3D (Three.js with either Canvas or WebGL rendering) options for visualizing data and provides a variety of static (radial tree based) and dynamic (force based) arrangement algorithms.
+Features
+---
+* 2D (D3.js with SVG rendering) and 3D (Three.js with either Canvas or WebGL rendering) rendering
+* static (radial tree based) and dynamic (force based) arrangement algorithms
+* Customizable highlighting and filtration rules for data attributes
+* Dynamic highlighting for numeric (heatmapping) and categorical sets
 
-The visualization also allows users to associate visual attributes (color, size, shape) with data attributes through its interface. This includes assigning an individual visual attribute using a rule (element.data.x == y so element.color = purple) or dynamically mapping an array of visual attributes to a data attribute (for every unique value of data.x assign a unique color).
+API
+---
+VinciGraph is designed to accept graphs either uploaded as a file or from a server in the GraphSON format defined as part of the TinkerPop Blueprints stack. GraphSON and related libraries are available at https://github.com/tinkerpop/blueprints/wiki/GraphSON-Reader-and-Writer-Library.
 
-All of a users settings and visual attributes are cached on the browser and can also be imported/exported from a flat file.
+Browser Compatability
+---
+VinciGraph.js (0.1) has only been tested on Firefox 31-33
 
-===Compatability===
-Vinci Graph Visualization (0.1) has only been tested on Firefox 31-33
+Example Backend
+---
+As an example of how VinciGraph would be used with a backend server, this version comes with an Vert.x backend that provides REST and 
 
-===Example Server===
-The first version of the Morse Graph Visualization uses the Python built in SimpleHTTPServer
+External Libraries Used
+---
+* Three.js (http://threejs.org/)
+* D3.js (http://d3js.org/)
+* Bootstrap (http://getbootstrap.com/)
+* React.js (http://facebook.github.io/react/)
 
-===External Libraries Used===
--Three.js (http://threejs.org/)
--D3.js (http://d3js.org/)
--Bootstrap (http://getbootstrap.com/)
--React.js (http://facebook.github.io/react/)
+Web Standards Used 
+---
+* WebSockets: https://developer.mozilla.org/en-US/docs/WebSockets
+* WebWorkers: https://developer.mozilla.org/en-US/docs/Web/Guide/Performance/Using_web_workers
+* WebGL: https://developer.mozilla.org/en-US/docs/Web/WebGL
+* SVG: https://developer.mozilla.org/en-US/docs/Web/SVG
+* ASM.js: http://asmjs.org/
